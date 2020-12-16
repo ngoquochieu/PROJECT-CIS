@@ -6,8 +6,6 @@ int main()
 {
     Book b;
     b.input();
-    b.display();
-    cout<<endl;
     b.edit();
     b.display();
 

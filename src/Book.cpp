@@ -24,24 +24,27 @@ Book::~Book()
 // Nhap thong tin cua sach
 bool Book::input()
 {
-    string name, author, publisher, category;
+ //   string name, author, publisher, category;
+
     cout<<"Enter name book ";
-    getline(cin, name);
-    this->nameBook = name;
+    getline(cin, this->nameBook);
+
     cout<<"Enter name Author ";
-    getline(cin, author);
-    this->author = author;
+    getline(cin, this->author);
+
     cout<<"Enter name Publisher ";
-    getline(cin, publisher);
-    this->publisher = publisher;
+    getline(cin, this->NXB);
+
     cout<<"Enter Category Code ";
-    getline(cin, category);
-    this->categoryCode = category;
+    getline(cin, this->categoryCode);
+
+    system("cls");
     return true;
 }
 // CHinh sua thong tin cua sach
 bool Book::edit()
 {
+    display();
     bool check = false;
     int choice;
     cout<<"1. Edit Name book"<<endl;
@@ -51,42 +54,47 @@ bool Book::edit()
     cout<<"Plese enter your choose ";
     do{
         cin>>choice;
+        system("cls");
         switch (choice)
         {
         case 1:
         {
-            string name;
+            display();
             cout<<"Enter Name Book you want to edit ";
-            cin>>name;
-            this->nameBook = name;
+            cin>>this->nameBook;
             check = true;
+            cout<<"Edit success "<<endl;
+        //    system("cls");
             break;
         }
          case 2:
         {
-            string author;
+            display();
             cout<<"Enter Author you want to edit ";
-            cin>>author;
-            this->author = author;
+            cin>>this->author;
             check = true;
+            cout<<"Edit success "<<endl;
+        //    system("cls");
             break;
         }
         case 3:
         {
-            string publisher;
+            display();
             cout<<"Enter Publisher you want to edit ";
-            cin>>publisher;
-            this->publisher = publisher;
+            cin>>this->NXB;
             check = true;
+            cout<<"Edit success "<<endl;
+         //   system("cls");
             break;
         }
         case 4:
         {
-            string categoryCode;
+            display();
             cout<<"Enter Category want to edit ";
-            cin>>categoryCode;
-            this->categoryCode = categoryCode;
+            cin>>this->categoryCode;
             check = true;
+         //   system("cls");
+            cout<<"Edit success "<<endl;
             break;
         }
         default:
@@ -94,30 +102,34 @@ bool Book::edit()
             check = false;
         }
 
-    }while(check != true);
+    }while(!check);
     string test;
-    cout<<"Do you want to continue edit (Y/N): ";
+    cout<<"Do you want to continue edit Y/N (YES/NO): ";
     do{
          cin>>test;
-         if (test == "Y"){
+         if (test == "Y" or test == "y"){
             cout<<"Corrected book information"<<endl;
-            Book::display();
+            system("cls");
             Book::edit();
          }
 
          else
-            if(test == "N")
-                return true;
+            if(test == "N" or test =="n"){
+                system("cls");
+                 return true;
+            }
+
             else
                 cout<<"Invalid selection. Please re-enter ";
-    }while(test != "Y" and test != "N");
+    }while(true);
  //   return true;
 }
 //IN cac thong tin cua sach
 void Book::display()
 {
+    cout<<"Information book"<<endl;
     cout<<"Name: "<<this->nameBook<<", ";
     cout<<"Author: "<<this->author<<", ";
-    cout<<"Publisher: "<<this->nameBook<<", ";
+    cout<<"Publisher: "<<this->NXB<<", ";
     cout<<"Category: "<<this->categoryCode<<endl;
 }

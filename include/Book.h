@@ -23,7 +23,7 @@ class Book
 
     private:
         // 001, AAA, AAA, AAA, A
-        string bookCode, nameBook, author, publisher, categoryCode;
+        string bookCode, nameBook, author, NXB, categoryCode;
 
     public:
         bool input(); // Nhập thông tin của sách

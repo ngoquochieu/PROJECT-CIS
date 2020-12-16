@@ -34,11 +34,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="README.md">
-			<Option compilerVar="CC" />
-			<Option compile="1" />
-			<Option link="1" />
-		</Unit>
 		<Unit filename="include/Book.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Book.cpp" />
