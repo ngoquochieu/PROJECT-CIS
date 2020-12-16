@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1608104147 source:d:\project-cis\quanlithuvien\main.cpp
+	<iostream>
+	"Book.h"
+
+1608105693 source:d:\project-cis\quanlithuvien\src\book.cpp
+	"Book.h"
+	<iostream>
+	<string>
+
+1608101162 d:\project-cis\quanlithuvien\include\book.h
+	<string>
+
