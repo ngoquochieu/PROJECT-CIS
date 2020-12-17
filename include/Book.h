@@ -31,6 +31,16 @@ class Book
         bool input(); // Nhập thông tin của sách
         bool edit();  // Chỉnh sửa thông tin của sách
         void display();
+        int getBookCode();
+        void setBookCode(int code);
+        string getNameBook();
+        void setNameBook(string nameBook);
+        string getAuthor();
+        void setAuthor(string author);
+        string getNXB();
+        void setNXB(string NXB);
+        string getCategoryCode();
+        void setCategoryCode(string categoryCode);
 };
 
 #endif // BOOK_H

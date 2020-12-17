@@ -29,6 +29,56 @@ Book::~Book()
 {
     //dtor
 }
+int Book::getBookCode()
+{
+    return this->bookCode;
+}
+
+void Book::setBookCode(int code)
+{
+    this->bookCode = code;
+}
+
+string Book::getNameBook()
+{
+    return this->nameBook;
+}
+
+void Book::setNameBook(string nameBook)
+{
+    this->nameBook = nameBook;
+}
+
+string Book::getAuthor()
+{
+    return this->author;
+}
+
+void Book::setAuthor(string author)
+{
+    this->author = author;
+}
+
+string Book::getNXB()
+{
+    return this->NXB;
+}
+
+void Book::setNXB(string NXB)
+{
+    this->NXB = NXB;
+}
+
+string Book::getCategoryCode()
+{
+    return this->categoryCode;
+}
+
+void Book::setCategoryCode(string categoryCode)
+{
+    this->categoryCode = categoryCode;
+}
+
 // Nhap thong tin cua sach
 bool Book::input()
 {

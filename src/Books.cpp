@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <conio.h>
 using namespace std;
 Books::Books()
 {
@@ -13,9 +14,61 @@ Books::~Books()
 {
     //dtor
 }
+// Them moi mot quyen sach
 bool Books::add()
 {
+    bool check = false;
+    do{
+    system("cls");
+    string nameBook, author, NXB, categoryCode;
+    fflush(stdin);
+    cout<<"Enter name book ";
+    getline(cin, nameBook);
 
+    cout<<"Enter name Author ";
+    getline(cin, author);
+
+    cout<<"Enter name Publisher ";
+    getline(cin, NXB);
+
+    cout<<"Enter Category Code ";
+    getline(cin, categoryCode);
+    system("cls");
+    cout<<"Add success\n";
+    Book b(books.size() + 1, nameBook, author, NXB, categoryCode);
+ //   books.push_back(b);
+    books.emplace_back(b);
+    string test;
+    bool check2 = false;
+    cout<<"Do you want to continue using the newly added functionality Y/N (YES/NO): ";
+    do{
+         cin>>test;
+         if (test == "Y" or test == "y"){
+            cout<<"Press Enter to continue\n";
+//            system("pause");
+            getch();
+//            cin.ignore();
+            check = true;
+            check2 = false;
+         }
+
+         else
+            if(test == "N" or test =="n"){
+                cout<<"Press any key to finish\n";
+ //               system("pause");
+                getch();
+ //               cin.ignore();
+                check = false;
+                check2= false;
+//                system("cls");
+
+            }
+            else{
+                cout<<"Invalid selection. Please re-enter ";
+                check2 = true;}
+    }while(check2);
+    }while(check != false);
+    return true;
 }
 
 bool Books::deleteBook()
