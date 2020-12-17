@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Book.h" />
+		<Unit filename="include/Books.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Book.cpp" />
+		<Unit filename="src/Books.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

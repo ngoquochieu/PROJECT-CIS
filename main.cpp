@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Book.h"
+#include "Books.h"
 using namespace std;
 
 int main()
 {
-    Book b;
-    b.input();
-    b.edit();
+    Books b;
+    b.readFile();
     b.display();
 
     return 0;

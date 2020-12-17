@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 /*
-- bookCode: string
+- bookCode: int
 - nameBook: string
 - author: string
 - publisher: string
@@ -17,13 +17,15 @@ class Book
 {
     public:
         Book();
+        Book(int bookCode, string name, string author, string NXB, string cate);
         virtual ~Book();
 
     protected:
 
     private:
         // 001, AAA, AAA, AAA, A
-        string bookCode, nameBook, author, NXB, categoryCode;
+        int bookCode;
+        string nameBook, author, NXB, categoryCode;
 
     public:
         bool input(); // Nhập thông tin của sách

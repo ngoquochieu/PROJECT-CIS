@@ -16,6 +16,14 @@ Book::Book()
 {
     //ctor
 }
+Book::Book(int bookCode, string name, string author, string NXB, string cate)
+{
+    this->bookCode = bookCode;
+    this->nameBook = name;
+    this->author = author;
+    this->NXB = NXB;
+    this->categoryCode = cate;
+}
 
 Book::~Book()
 {
@@ -127,7 +135,7 @@ bool Book::edit()
 //IN cac thong tin cua sach
 void Book::display()
 {
-    cout<<"Information book"<<endl;
+//    cout<<"Information book"<<endl;
     cout<<"Name: "<<this->nameBook<<", ";
     cout<<"Author: "<<this->author<<", ";
     cout<<"Publisher: "<<this->NXB<<", ";
